@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+    <linearGradient id="pcb" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#111827" />
+      <stop offset="100%" stop-color="#0f172a" />
+    </linearGradient>
+    <linearGradient id="metal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#334155" />
+      <stop offset="50%" stop-color="#64748b" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="cyanGlow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f0ff" />
+      <stop offset="100%" stop-color="#0284c7" />
+    </linearGradient>
+  </defs>
+
+  <!-- Arka Plan -->
+  <rect width="600" height="450" fill="url(#bg)" />
+
+  <!-- Anakart PCB Kartı -->
+  <rect x="75" y="45" width="450" height="360" rx="8" fill="url(#pcb)" stroke="#38bdf8" stroke-width="1.5" stroke-opacity="0.3" />
+
+  <!-- Siber Devre Çizgileri -->
+  <path d="M 85 90 L 150 90 L 180 120 L 260 120" stroke="#00f0ff" stroke-width="1.2" stroke-opacity="0.4" fill="none" />
+  <path d="M 85 360 L 160 360 L 200 320 L 320 320" stroke="#00f0ff" stroke-width="1.2" stroke-opacity="0.3" fill="none" />
+  <path d="M 400 60 L 400 130 L 440 170" stroke="#38bdf8" stroke-width="1.2" stroke-opacity="0.4" fill="none" />
+
+  <!-- LGA 1700 CPU Soketi -->
+  <rect x="180" y="90" width="130" height="130" rx="6" fill="#1e293b" stroke="#64748b" stroke-width="2" />
+  <rect x="200" y="110" width="90" height="90" rx="4" fill="#0f172a" stroke="#00f0ff" stroke-width="1" stroke-dasharray="3 3" />
+  <text x="245" y="152" fill="#94a3b8" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">LGA 1700</text>
+  <text x="245" y="168" fill="#38bdf8" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle">INTEL CORE</text>
+
+  <!-- VRM Soğutucu Blokları -->
+  <rect x="110" y="80" width="55" height="145" rx="4" fill="url(#metal)" stroke="#475569" stroke-width="1" />
+  <rect x="180" y="55" width="130" height="25" rx="3" fill="url(#metal)" stroke="#475569" stroke-width="1" />
+  <text x="137" y="155" fill="#f8fafc" font-family="sans-serif" font-size="9" font-weight="900" transform="rotate(-90 137 155)" text-anchor="middle">ROG STRIX</text>
+
+  <!-- 4x DDR5 Bellek Yuvaları -->
+  <g transform="translate(340, 75)">
+    <rect x="0" y="0" width="14" height="160" rx="2" fill="#0284c7" />
+    <rect x="20" y="0" width="14" height="160" rx="2" fill="#1e293b" stroke="#475569" />
+    <rect x="40" y="0" width="14" height="160" rx="2" fill="#0284c7" />
+    <rect x="60" y="0" width="14" height="160" rx="2" fill="#1e293b" stroke="#475569" />
+    <text x="37" y="180" fill="#94a3b8" font-family="sans-serif" font-size="9" font-weight="bold" text-anchor="middle">4x DDR5 7800+ MHz</text>
+  </g>
+
+  <!-- PCIe 5.0 x16 Çelik Korumalı Slot -->
+  <rect x="140" y="250" width="260" height="18" rx="3" fill="url(#metal)" stroke="#94a3b8" stroke-width="1.5" />
+  <rect x="145" y="256" width="250" height="6" rx="1" fill="#0f172a" />
+  <text x="270" y="263" fill="#00f0ff" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle">PCIe 5.0 x16 SAFESLOT</text>
+
+  <!-- 2x M.2 NVMe Soğutucu Zırhı -->
+  <rect x="140" y="280" width="170" height="26" rx="3" fill="url(#metal)" stroke="#475569" />
+  <text x="225" y="297" fill="#f8fafc" font-family="sans-serif" font-size="9" font-weight="bold" text-anchor="middle">ROG M.2 HEATSINK</text>
+  
+  <rect x="140" y="320" width="170" height="26" rx="3" fill="url(#metal)" stroke="#475569" />
+  <text x="225" y="337" fill="#f8fafc" font-family="sans-serif" font-size="9" font-weight="bold" text-anchor="middle">PCIe 4.0 NVMe SHIELD</text>
+
+  <!-- Çipset PCH Soğutucu Bloku -->
+  <rect x="340" y="265" width="110" height="100" rx="6" fill="#1e293b" stroke="#38bdf8" stroke-width="1.5" />
+  <circle cx="395" cy="315" r="28" fill="#0f172a" stroke="#00f0ff" stroke-width="1.5" />
+  <path d="M 385 305 L 405 325 M 405 305 L 385 325" stroke="#00f0ff" stroke-width="2.5" />
+  <text x="395" y="352" fill="#38bdf8" font-family="sans-serif" font-size="8" font-weight="bold" text-anchor="middle">B760 CHIPSET</text>
+
+  <!-- Rozet -->
+  <rect x="90" y="380" width="120" height="20" rx="10" fill="#0284c7" fill-opacity="0.2" stroke="#00f0ff" stroke-width="1" />
+  <text x="150" y="394" fill="#00f0ff" font-family="sans-serif" font-size="9" font-weight="bold" text-anchor="middle">WiFi 6E + 2.5G LAN</text>
+</svg>

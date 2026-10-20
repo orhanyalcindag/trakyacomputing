@@ -34,7 +34,7 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 14,
     badge: "Çok Satan",
-    image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=900&q=85",
+    image: "/products/anakart.svg",
     shortDesc: "Intel LGA1700 soket, PCIe 5.0, DDR5 7800+ MHz ve WiFi 6E desteği ile kurumsal iş istasyonları ve üst seviye PC'ler için mükemmel seçim.",
     specs: {
       "Soket Tipi": "LGA 1700 (14. & 13. Nesil Intel Core)",
@@ -57,7 +57,7 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 28,
     badge: "AI Destekli",
-    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=900&q=85",
+    image: "/products/kamera.svg",
     shortDesc: "Yapay zeka derin öğrenme insan/araç sınıflandırması, gece tam renkli DarkFighter teknolojisi ve IP67 dış ortam korumalı profesyonel güvenlik kamerası.",
     specs: {
       "Çözünürlük": "8 Megapiksel 4K UltraHD (3840 x 2160)",
@@ -80,7 +80,7 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 9,
     badge: "16x Dahili PoE",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=85",
+    image: "/products/nvr.svg",
     shortDesc: "16 adet bağımsız PoE portu ile doğrudan tak-çalıştır kamera bağlantısı, 2x 10TB HDD desteği ve H.265+ ultra bant genişliği tasarrufu sağlayan kayıt cihazı.",
     specs: {
       "Kanal Sayısı": "16 Kanal 4K Akıllı IP Kamera Eşzamanlı",
@@ -103,7 +103,7 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 7,
     badge: "Kurumsal Standart",
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=900&q=85",
+    image: "/products/switch.svg",
     shortDesc: "24 Gigabit PoE+ port (195W güç bütçesi) ve 4x Gigabit SFP fiber yuvası ile kurumsal ağ omurgalarının kesintisiz anahtarı.",
     specs: {
       "Portlar": "24x 10/100/1000 Gigabit PoE+ RJ45",
@@ -126,7 +126,7 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 85,
     badge: "Özel Üretim",
-    image: "https://images.unsplash.com/photo-1634907724726-f7734f10469b?auto=format&fit=crop&w=900&q=85",
+    image: "/products/braket.svg",
     shortDesc: "Kamera montajında standart vidaların oturmadığı direk, boru ve kolonlar için karbon takviyeli PETG kompozit filament ile basılmış yüksek mukavemetli braket.",
     specs: {
       "Malzeme": "Karbon Fiber Takviyeli Endüstriyel PETG Plastik",
@@ -149,7 +149,7 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 18,
     badge: "Enterprise",
-    image: "https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&w=900&q=85",
+    image: "/products/ram.svg",
     shortDesc: "Veri merkezleri, sanallaştırma ve kurumsal sunucu altyapıları için hata düzeltmeli (ECC) kayıtlı endüstri standardı bellek modülü.",
     specs: {
       "Kapasite": "64 GB (1x 64GB Tek Modül)",
@@ -172,7 +172,7 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 40,
     badge: "Tasarım Ödüllü",
-    image: "https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&w=900&q=85",
+    image: "/products/rackmount.svg",
     shortDesc: "Sistem kabinetlerinde masaüstü tipi mini PC veya kompakt kayıt cihazlarını düzenli 1U alanına kilitleyen özel hava kanallı 3D kızak.",
     specs: {
       "Boyut": "19 inç Standart 1U Rack Kızağı",
@@ -195,7 +195,7 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 6,
     badge: "10G Fiber",
-    image: "https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&w=900&q=85",
+    image: "/products/router.svg",
     shortDesc: "Trakya bölgesindeki fabrikalar için yüksek hızlı fiber internet dağıtımı, çoklu WAN yük dengeleme ve gelişmiş donanımsal güvenlik duvarı.",
     specs: {
       "İşlemci": "Dual Core 800MHz + Donanımsal Switch Çipi",
@@ -218,7 +218,7 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 22,
     badge: "7/24 Kesintisiz",
-    image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=900&q=85",
+    image: "/products/hdd.svg",
     shortDesc: "Yapay zeka destekli NVR kayıt cihazları için 64 kameraya kadar kesintisiz 4K video yazma kapasitesine sahip kurumsal disk.",
     specs: {
       "Kapasite": "8 Terabayt (8000 GB)",
@@ -241,7 +241,7 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 15,
     badge: "WiFi 6 Hızı",
-    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85",
+    image: "/products/wifi.svg",
     shortDesc: "Geniş fabrika, depo ve ofis alanlarında 300+ eşzamanlı cihaz için 5.3 Gbps toplam bant genişliği sağlayan profesyonel PoE AP.",
     specs: {
       "Kablosuz Standart": "Wi-Fi 6 (802.11ax) Dual-Band",

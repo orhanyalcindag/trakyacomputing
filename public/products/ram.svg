@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="ramBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+    <linearGradient id="pcbGreen" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="50%" stop-color="#022c22" />
+      <stop offset="100%" stop-color="#064e3b" />
+    </linearGradient>
+    <linearGradient id="gold" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#fef08a" />
+      <stop offset="50%" stop-color="#eab308" />
+      <stop offset="100%" stop-color="#ca8a04" />
+    </linearGradient>
+  </defs>
+
+  <rect width="600" height="450" fill="url(#ramBg)" />
+
+  <!-- RAM Modülü Ana PCB Gövdesi -->
+  <g transform="translate(60, 160)">
+    <!-- Yeşil/Siyah Sunucu PCB Kartı -->
+    <rect x="0" y="0" width="480" height="110" rx="4" fill="url(#pcbGreen)" stroke="#10b981" stroke-width="1.5" />
+
+    <!-- Altın Kaplama DIMM Bağlantı Pinleri (288-Pin DDR5) -->
+    <!-- Sol Pin Bloğu -->
+    <rect x="15" y="105" width="215" height="16" fill="url(#gold)" />
+    <!-- Çentik (Key Notch) -->
+    <rect x="230" y="100" width="16" height="21" fill="#030712" />
+    <!-- Sağ Pin Bloğu -->
+    <rect x="246" y="105" width="219" height="16" fill="url(#gold)" />
+
+    <!-- Pin Ayrım Çizgileri Deseni -->
+    <line x1="15" y1="110" x2="230" y2="110" stroke="#a16207" stroke-dasharray="2 2" />
+    <line x1="246" y1="110" x2="465" y2="110" stroke="#a16207" stroke-dasharray="2 2" />
+
+    <!-- 8 Adet DDR5 Bellek Yongası (BGA Chips) -->
+    <g fill="#0f172a" stroke="#334155" stroke-width="1">
+      <rect x="25" y="15" width="42" height="50" rx="2" />
+      <rect x="75" y="15" width="42" height="50" rx="2" />
+      <rect x="125" y="15" width="42" height="50" rx="2" />
+      <rect x="175" y="15" width="42" height="50" rx="2" />
+
+      <!-- Merkez RCD (Registering Clock Driver) & PMIC Çipi -->
+      <rect x="228" y="20" width="26" height="35" rx="2" fill="#1e293b" stroke="#eab308" />
+
+      <rect x="265" y="15" width="42" height="50" rx="2" />
+      <rect x="315" y="15" width="42" height="50" rx="2" />
+      <rect x="365" y="15" width="42" height="50" rx="2" />
+      <rect x="415" y="15" width="42" height="50" rx="2" />
+    </g>
+
+    <!-- Çip Üzeri İnce Yazılar -->
+    <text x="241" y="42" fill="#eab308" font-family="sans-serif" font-size="6" font-weight="bold" text-anchor="middle">RCD</text>
+
+    <!-- Beyaz Kurumsal Ürün Etiketi -->
+    <rect x="140" y="72" width="200" height="26" rx="2" fill="#ffffff" stroke="#94a3b8" />
+    <text x="150" y="85" fill="#dc2626" font-family="sans-serif" font-size="9" font-weight="900">Kingston</text>
+    <text x="195" y="85" fill="#0f172a" font-family="sans-serif" font-size="8" font-weight="bold">Server Premier</text>
+    <text x="150" y="94" fill="#475569" font-family="sans-serif" font-size="7" font-weight="bold">64GB 2Rx4 PC5-4800B-RE2-12 ECC REG</text>
+  </g>
+
+  <!-- Alt Bilgi Kutusu -->
+  <rect x="160" y="320" width="280" height="26" rx="13" fill="#0f172a" stroke="#10b981" stroke-width="1" stroke-opacity="0.4" />
+  <text x="300" y="337" fill="#10b981" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">DDR5 ECC Registered • 4800 MHz • CL40 • 1.1V</text>
+</svg>

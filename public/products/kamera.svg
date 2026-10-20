@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="camBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0b1329" />
+      <stop offset="100%" stop-color="#030712" />
+    </linearGradient>
+    <linearGradient id="bodyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="50%" stop-color="#e2e8f0" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+    <linearGradient id="sunshade" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" />
+      <stop offset="100%" stop-color="#cbd5e1" />
+    </linearGradient>
+    <radialGradient id="lensGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="40%" stop-color="#0284c7" />
+      <stop offset="85%" stop-color="#030712" />
+      <stop offset="100%" stop-color="#00f0ff" />
+    </radialGradient>
+  </defs>
+
+  <rect width="600" height="450" fill="url(#camBg)" />
+
+  <!-- Arka Plan Dekoratif Ağ Düğümleri -->
+  <circle cx="150" cy="120" r="80" fill="#00f0ff" fill-opacity="0.05" />
+  <circle cx="450" cy="300" r="120" fill="#0284c7" fill-opacity="0.06" />
+
+  <!-- Montaj Duvar Tabanı (Bracket Mount) -->
+  <path d="M 120 180 L 170 195 L 170 275 L 120 290 Z" fill="#475569" stroke="#94a3b8" stroke-width="2" />
+  <circle cx="145" cy="210" r="4" fill="#1e293b" />
+  <circle cx="145" cy="260" r="4" fill="#1e293b" />
+
+  <!-- Eklemli Kamera Boynu (Swivel Arm) -->
+  <path d="M 170 220 L 250 210 L 250 250 L 170 260 Z" fill="#64748b" stroke="#334155" stroke-width="1.5" />
+  <circle cx="210" cy="235" r="10" fill="#1e293b" stroke="#00f0ff" stroke-width="1.5" />
+
+  <!-- Kamera Ana Gövdesi (Bullet Cilinder Body) -->
+  <rect x="235" y="165" width="220" height="130" rx="12" fill="url(#bodyGrad)" stroke="#94a3b8" stroke-width="1.5" />
+
+  <!-- Üst Güneş & Yağmur Siperliği (Sunshield) -->
+  <path d="M 220 150 L 485 150 L 470 172 L 225 172 Z" fill="url(#sunshade)" stroke="#94a3b8" stroke-width="1" />
+
+  <!-- Hikvision & DarkFighter Marka Logoları -->
+  <text x="340" y="225" fill="#1e293b" font-family="sans-serif" font-size="16" font-weight="900" letter-spacing="1">HIKVISION</text>
+  <text x="340" y="242" fill="#0284c7" font-family="sans-serif" font-size="10" font-weight="bold" letter-spacing="0.5">AcuSense • DarkFighter</text>
+
+  <!-- Ön Siyah Lens Paneli -->
+  <rect x="450" y="168" width="40" height="124" rx="6" fill="#0f172a" stroke="#1e293b" stroke-width="2" />
+
+  <!-- 4K Optik Lens (Göz Alıcı Işıltılı Cam) -->
+  <circle cx="470" cy="230" r="28" fill="url(#lensGrad)" stroke="#38bdf8" stroke-width="2" />
+  <circle cx="470" cy="230" r="14" fill="#030712" />
+  <circle cx="463" cy="223" r="4" fill="#ffffff" fill-opacity="0.8" />
+
+  <!-- IR Gece Görüş LED Halkaları -->
+  <circle cx="470" cy="185" r="4" fill="#ef4444" fill-opacity="0.8" />
+  <circle cx="470" cy="275" r="4" fill="#ef4444" fill-opacity="0.8" />
+
+  <!-- AI Lazer Hedefleme Çerçevesi (Dekoratif) -->
+  <path d="M 450 140 L 530 140 M 530 140 L 530 200" stroke="#00f0ff" stroke-width="2" fill="none" />
+  <path d="M 530 260 L 530 320 M 530 320 L 450 320" stroke="#00f0ff" stroke-width="2" fill="none" />
+  <text x="540" y="235" fill="#00f0ff" font-family="sans-serif" font-size="11" font-weight="bold">AI 4K UHD</text>
+
+  <!-- Alt Bilgi Etiketi -->
+  <rect x="250" y="325" width="220" height="26" rx="13" fill="#0f172a" stroke="#00f0ff" stroke-width="1" stroke-opacity="0.4" />
+  <text x="360" y="342" fill="#00f0ff" font-family="sans-serif" font-size="10" font-weight="bold" text-anchor="middle">IP67 • IK10 • PoE 802.3af</text>
+</svg>

@@ -191,14 +191,13 @@ export default function MagazaPage() {
                   </button>
 
                   {/* Ürün Görseli */}
-                  <div className="relative w-full h-48 bg-slate-100 dark:bg-slate-900 overflow-hidden">
+                  <div className="relative w-full h-48 bg-[#0b1329] overflow-hidden flex items-center justify-center border-b border-slate-200 dark:border-slate-800">
                     <img
                       src={product.image}
                       alt={product.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
+                      className="w-full h-full object-contain p-2.5 group-hover:scale-105 transition-transform duration-300"
+                      loading="eager"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0d1726] via-transparent to-transparent opacity-60" />
                   </div>
 
                   {/* Bilgiler */}
@@ -277,11 +276,11 @@ export default function MagazaPage() {
             </button>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
-              <div className="relative rounded-xl overflow-hidden h-64 bg-slate-900">
+              <div className="relative rounded-2xl overflow-hidden h-64 bg-[#0b1329] flex items-center justify-center border border-white/10">
                 <img
                   src={quickViewProduct.image}
                   alt={quickViewProduct.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain p-4"
                 />
               </div>
 
