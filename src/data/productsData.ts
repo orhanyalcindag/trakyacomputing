@@ -1,6 +1,6 @@
 /**
  * Trakyacomputing - E-Ticaret Donanım & Parça Veri Modeli
- * Saha kurulumları, kurumsal BT altyapıları ve bireysel performans için donanımlar
+ * Saha kurulumları, kurumsal BT altyapıları ve endüstriyel tesisler için test edilmiş orijinal donanımlar
  */
 
 export interface ProductItem {
@@ -24,7 +24,7 @@ export interface ProductItem {
 export const productsData: ProductItem[] = [
   {
     id: "prod-mb-01",
-    name: "ASUS ROG STRIX B760-F Gaming WiFi Anakart",
+    name: "ASUS ROG STRIX B760-F Gaming WiFi DDR5 Anakart",
     category: "donanim",
     categoryLabel: "Donanım & Parça",
     price: 9450,
@@ -34,20 +34,20 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 14,
     badge: "Çok Satan",
-    image: "https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80",
-    shortDesc: "Intel LGA1700 soket, PCIe 5.0, DDR5 bellek ve WiFi 6E desteği ile kurumsal iş istasyonları ve üst seviye PC'ler için mükemmel seçim.",
+    image: "https://images.unsplash.com/photo-1591799264318-7e6ef8ddb7ea?auto=format&fit=crop&w=900&q=85",
+    shortDesc: "Intel LGA1700 soket, PCIe 5.0, DDR5 7800+ MHz ve WiFi 6E desteği ile kurumsal iş istasyonları ve üst seviye PC'ler için mükemmel seçim.",
     specs: {
-      "Soket Tipi": "LGA 1700 (14. & 13. Nesil Intel)",
-      "Bellek Desteği": "4x DDR5 7800+ MHz (OC)",
-      "Genişleme Yuvası": "1x PCIe 5.0 x16",
-      "Depolama": "3x M.2 PCIe 4.0 NVMe",
-      "Ağ": "Intel 2.5Gb Ethernet & WiFi 6E"
+      "Soket Tipi": "LGA 1700 (14. & 13. Nesil Intel Core)",
+      "Bellek Desteği": "4x DDR5 7800+ MHz (OC) 192GB Max",
+      "Genişleme Yuvası": "1x PCIe 5.0 x16 SafeSlot",
+      "Depolama": "3x M.2 PCIe 4.0 NVMe Soğutuculu",
+      "Ağ": "Intel 2.5Gb Ethernet & WiFi 6E Antenli"
     },
     isFeatured: true
   },
   {
     id: "prod-cam-02",
-    name: "Hikvision AcuSense 8MP 4K DarkFighter IP Bullet Kamera",
+    name: "Hikvision AcuSense 8MP 4K DarkFighter IP Bullet Güvenlik Kamerası",
     category: "ag-guvenlik",
     categoryLabel: "Ağ & Güvenlik",
     price: 4850,
@@ -57,20 +57,20 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 28,
     badge: "AI Destekli",
-    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=800&q=80",
-    shortDesc: "Yapay zeka insan/araç sınıflandırması, gece tam renkli DarkFighter teknolojisi ve IP67 dış ortam korumalı profesyonel güvenlik kamerası.",
+    image: "https://images.unsplash.com/photo-1557597774-9d273605dfa9?auto=format&fit=crop&w=900&q=85",
+    shortDesc: "Yapay zeka derin öğrenme insan/araç sınıflandırması, gece tam renkli DarkFighter teknolojisi ve IP67 dış ortam korumalı profesyonel güvenlik kamerası.",
     specs: {
-      "Çözünürlük": "8 Megapiksel 4K (3840 x 2160)",
-      "Lens": "2.8mm Geniş Açı (107° görüş)",
-      "Gece Görüşü": "60 Metre EXIR IR + DarkFighter",
-      "Koruma Sınıfı": "IP67 Su/Toz & IK10 Darbe",
-      "Besleme": "PoE (802.3af) / 12V DC"
+      "Çözünürlük": "8 Megapiksel 4K UltraHD (3840 x 2160)",
+      "Lens": "2.8mm Geniş Açı (107° yatay görüş)",
+      "Gece Görüşü": "60 Metre EXIR IR + DarkFighter Sensör",
+      "Koruma Sınıfı": "IP67 Su/Toz & IK10 Darbe Sertifikası",
+      "Besleme": "PoE (802.3af) / 12V DC Dahili Mikrofon"
     },
     isFeatured: true
   },
   {
     id: "prod-nvr-03",
-    name: "Hikvision 16 Kanal 4K UltraHD Akıllı PoE NVR Cihazı",
+    name: "Hikvision 16 Kanal 4K UltraHD Akıllı PoE NVR Kayıt Sunucusu",
     category: "ag-guvenlik",
     categoryLabel: "Ağ & Güvenlik",
     price: 12900,
@@ -80,14 +80,14 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 9,
     badge: "16x Dahili PoE",
-    image: "https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&w=800&q=80",
-    shortDesc: "16 adet bağımsız PoE portu ile doğrudan tak-çalıştır kamera bağlantısı, 2x 10TB HDD desteği ve H.265+ ultra sıkıştırma algoritması.",
+    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=900&q=85",
+    shortDesc: "16 adet bağımsız PoE portu ile doğrudan tak-çalıştır kamera bağlantısı, 2x 10TB HDD desteği ve H.265+ ultra bant genişliği tasarrufu sağlayan kayıt cihazı.",
     specs: {
-      "Kanal Sayısı": "16 Kanal 4K Akıllı IP Kamera",
-      "PoE Arayüzü": "16x 10/100 Mbps Bağımsız PoE",
-      "Bant Genişliği": "160 Mbps Giriş / 160 Mbps Çıkış",
-      "HDD Yuvası": "2x SATA Portu (2x 10TB'a kadar)",
-      "Video Çıkışı": "1x HDMI (4K), 1x VGA"
+      "Kanal Sayısı": "16 Kanal 4K Akıllı IP Kamera Eşzamanlı",
+      "PoE Arayüzü": "16x 10/100 Mbps Bağımsız PoE RJ45",
+      "Bant Genişliği": "160 Mbps Giriş / 160 Mbps Çıkış Kapasitesi",
+      "HDD Yuvası": "2x SATA Portu (2x 10TB = 20TB Max)",
+      "Video Çıkışı": "1x HDMI (4K 3840x2160), 1x VGA"
     },
     isFeatured: true
   },
@@ -103,14 +103,14 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 7,
     badge: "Kurumsal Standart",
-    image: "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80",
-    shortDesc: "24 Gigabit PoE+ port (195W güç bütçesi) ve 4x Gigabit SFP fiber yuvası ile kurumsal ağ omurgalarının vazgeçilmez anahtarı.",
+    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=900&q=85",
+    shortDesc: "24 Gigabit PoE+ port (195W güç bütçesi) ve 4x Gigabit SFP fiber yuvası ile kurumsal ağ omurgalarının kesintisiz anahtarı.",
     specs: {
       "Portlar": "24x 10/100/1000 Gigabit PoE+ RJ45",
       "Uplink": "4x Gigabit SFP Fiber Yuvası",
-      "PoE Bütçesi": "195 Watt Toplam Güç",
-      "Yönetim": "Web GUI, CLI, SNMP, VLAN, QoS",
-      "Kasa Tipi": "1U Rack Tipi 19 inç Kabinet Montaj"
+      "PoE Bütçesi": "195 Watt Toplam Güç Beslemesi",
+      "Yönetim": "Web GUI, CLI, SNMP, VLAN, QoS, Port Mirroring",
+      "Kasa Tipi": "1U Rack Tipi 19 inç Kabinet Montaj Kiti Dahil"
     },
     isFeatured: true
   },
@@ -126,20 +126,20 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 85,
     badge: "Özel Üretim",
-    image: "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=800&q=80",
-    shortDesc: "Kamera montajında standart vidaların oturmadığı direk ve kolonlar için karbon takviyeli PETG filament ile basılmış yüksek mukavemetli braket.",
+    image: "https://images.unsplash.com/photo-1634907724726-f7734f10469b?auto=format&fit=crop&w=900&q=85",
+    shortDesc: "Kamera montajında standart vidaların oturmadığı direk, boru ve kolonlar için karbon takviyeli PETG kompozit filament ile basılmış yüksek mukavemetli braket.",
     specs: {
-      "Malzeme": "Karbon Fiber Takviyeli PETG Plastik",
-      "Hava Dayanımı": "-30°C / +85°C UV Korumalı",
+      "Malzeme": "Karbon Fiber Takviyeli Endüstriyel PETG Plastik",
+      "Hava Dayanımı": "-35°C / +85°C UV & Yağmur Korumalı",
       "Uyumluluk": "Hikvision, Dahua, Uniview Tüm Standart Kameralar",
-      "Taşıma Kapasitesi": "12 Kg Test Edilmiş Statik Yük",
+      "Taşıma Kapasitesi": "15 Kg Test Edilmiş Statik Rüzgar Yükü",
       "Montaj": "Çelik Kelepçe veya Dübel Kanalları Dahil"
     },
     isFeatured: true
   },
   {
     id: "prod-ram-06",
-    name: "Kingston Server Premier 64GB DDR5 4800MHz ECC Reg RAM",
+    name: "Kingston Server Premier 64GB DDR5 4800MHz ECC Reg Sunucu RAM",
     category: "sunucu",
     categoryLabel: "Sunucu & Donanım",
     price: 11200,
@@ -149,14 +149,14 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 18,
     badge: "Enterprise",
-    image: "https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1562976540-1502c2145186?auto=format&fit=crop&w=900&q=85",
     shortDesc: "Veri merkezleri, sanallaştırma ve kurumsal sunucu altyapıları için hata düzeltmeli (ECC) kayıtlı endüstri standardı bellek modülü.",
     specs: {
       "Kapasite": "64 GB (1x 64GB Tek Modül)",
-      "Bellek Tipi": "DDR5 ECC Registered DIMM",
+      "Bellek Tipi": "DDR5 ECC Registered DIMM (RDIMM)",
       "Frekans": "4800 MHz (PC5-38400)",
-      "Gecikme": "CL40 (1.1V Düşük Güç)",
-      "Garanti": "Ömür Boyu Kingston Garantisi"
+      "Gecikme & Voltaj": "CL40 (1.1V Düşük Güç Tüketimi)",
+      "Garanti": "Ömür Boyu Kingston Türkiye Distribütör Garantisi"
     },
     isFeatured: false
   },
@@ -172,7 +172,7 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 40,
     badge: "Tasarım Ödüllü",
-    image: "https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&w=800&q=80",
+    image: "https://images.unsplash.com/photo-1597733336794-12d05021d510?auto=format&fit=crop&w=900&q=85",
     shortDesc: "Sistem kabinetlerinde masaüstü tipi mini PC veya kompakt kayıt cihazlarını düzenli 1U alanına kilitleyen özel hava kanallı 3D kızak.",
     specs: {
       "Boyut": "19 inç Standart 1U Rack Kızağı",
@@ -195,14 +195,60 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 6,
     badge: "10G Fiber",
-    image: "https://images.unsplash.com/photo-1544197150-b99a580bb7a8?auto=format&fit=crop&w=800&q=80",
-    shortDesc: "Trakya bölgesindeki fabrikalar için yüksek hızlı fiber internet dağıtımı, çoklu WAN yük dengeleme ve gelişmiş güvenlik duvarı.",
+    image: "https://images.unsplash.com/photo-1544652478-6653e09f18a2?auto=format&fit=crop&w=900&q=85",
+    shortDesc: "Trakya bölgesindeki fabrikalar için yüksek hızlı fiber internet dağıtımı, çoklu WAN yük dengeleme ve gelişmiş donanımsal güvenlik duvarı.",
     specs: {
       "İşlemci": "Dual Core 800MHz + Donanımsal Switch Çipi",
-      "Fiber Portlar": "2x 10G SFP+ Yuvası",
+      "Fiber Portlar": "2x 10G SFP+ Yuvası (10 Gigabit)",
       "Ethernet": "8x Gigabit RJ45 Port",
       "İşletim Sistemi": "Dual Boot: RouterOS (L5) / SwOS",
-      "Kullanım": "Hotspot, VLAN, IPSec VPN, QoS, Firewall"
+      "Kullanım": "Hotspot, VLAN, IPSec VPN, QoS, Firewall 5651"
+    },
+    isFeatured: false
+  },
+  {
+    id: "prod-hdd-09",
+    name: "Western Digital Purple Pro 8TB 7200RPM 256MB Güvenlik NVR Hard Diski",
+    category: "ag-guvenlik",
+    categoryLabel: "Ağ & Güvenlik",
+    price: 7850,
+    oldPrice: 8900,
+    rating: 5.0,
+    reviewsCount: 44,
+    inStock: true,
+    stockCount: 22,
+    badge: "7/24 Kesintisiz",
+    image: "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?auto=format&fit=crop&w=900&q=85",
+    shortDesc: "Yapay zeka destekli NVR kayıt cihazları için 64 kameraya kadar kesintisiz 4K video yazma kapasitesine sahip kurumsal disk.",
+    specs: {
+      "Kapasite": "8 Terabayt (8000 GB)",
+      "Dönüş Hızı": "7200 RPM",
+      "Önbellek": "256 MB Cache",
+      "İş Yükü": "Yılda 550 TB Veri Yazma Oranı",
+      "Garanti": "5 Yıl Resmi Distribütör Birebir Değişim"
+    },
+    isFeatured: true
+  },
+  {
+    id: "prod-wifi-10",
+    name: "Ubiquiti UniFi 6 Pro Endüstriyel WiFi 6 Tavan Tipi Erişim Noktası",
+    category: "ag-guvenlik",
+    categoryLabel: "Ağ & Güvenlik",
+    price: 6900,
+    oldPrice: 7750,
+    rating: 4.9,
+    reviewsCount: 37,
+    inStock: true,
+    stockCount: 15,
+    badge: "WiFi 6 Hızı",
+    image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=900&q=85",
+    shortDesc: "Geniş fabrika, depo ve ofis alanlarında 300+ eşzamanlı cihaz için 5.3 Gbps toplam bant genişliği sağlayan profesyonel PoE AP.",
+    specs: {
+      "Kablosuz Standart": "Wi-Fi 6 (802.11ax) Dual-Band",
+      "Hız": "4.8 Gbps (5 GHz) + 573 Mbps (2.4 GHz)",
+      "Kullanıcı Kapasitesi": "350+ Eşzamanlı Cihaz Bağlantısı",
+      "Besleme": "PoE+ (802.3at) Ethernet Üzerinden Güç",
+      "Yönetim": "UniFi Network Kontrolcü Merkezi Yönetim"
     },
     isFeatured: false
   }
