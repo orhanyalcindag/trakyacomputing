@@ -10,228 +10,315 @@ import {
   CheckCircle2, 
   ArrowRight, 
   Sparkles, 
-  ExternalLink,
   ChevronRight,
-  Layers
+  Layers,
+  ArrowUpRight,
+  Database,
+  Radio,
+  Box,
+  Wrench
 } from "lucide-react";
 import { servicesData, ServiceItem } from "@/data/servicesData";
 import { useCart } from "@/context/CartContext";
 
 export default function ServicesSection() {
   const { openQuoteModalWithService } = useCart();
-  const [activeTab, setActiveTab] = useState<string>("all");
   const [selectedService, setSelectedService] = useState<ServiceItem | null>(null);
 
-  // İkon eşleştirici
-  const renderIcon = (iconName: string) => {
-    switch (iconName) {
-      case "Code":
-        return <Code2 className="w-7 h-7 text-cyan-400" />;
-      case "ShieldCheck":
-        return <ShieldCheck className="w-7 h-7 text-blue-400" />;
-      case "Server":
-        return <Server className="w-7 h-7 text-indigo-400" />;
-      case "Cpu":
-        return <Cpu className="w-7 h-7 text-sky-400" />;
-      default:
-        return <Layers className="w-7 h-7 text-cyan-400" />;
-    }
-  };
-
   return (
-    <section id="hizmetler" className="py-24 relative bg-slate-50 dark:bg-[#070d19]/60 border-t border-slate-200 dark:border-slate-800/80">
+    <section id="hizmetler" className="py-24 relative bg-[#040814] border-t border-white/[0.06]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Bölüm Başlığı */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/15 border border-sky-400/30 text-cyan-400 text-xs font-bold tracking-wider uppercase">
-            <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
-            <span>Bütünleşik BT Çözümleri</span>
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/[0.1] text-xs font-semibold text-sky-400">
+            <Sparkles className="w-3.5 h-3.5 text-sky-400" />
+            <span>Bütünleşik BT Mühendisliği</span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight drop-shadow-sm">
+          <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
             İşletmenizin İhtiyaç Duyduğu Tüm Teknoloji Tek Çatı Altında
           </h2>
           
-          <p className="text-base sm:text-lg text-slate-300">
+          <p className="text-base sm:text-lg text-slate-300 max-w-2xl mx-auto">
             Yazılımdan donanıma, kamera güvenliğinden sahaya özel 3D aparat üretimine kadar Trakya genelinde uçtan uca anahtar teslim hizmet.
           </p>
         </div>
 
-        {/* Hizmetler Grid Yapısı (4 Temel Sütun) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {servicesData.map((service, index) => (
-            <div
-              key={service.id}
-              className="group relative flex flex-col justify-between rounded-2xl bg-[#0d1726] border border-slate-800 hover:border-sky-500/50 p-6 shadow-lg hover:shadow-xl hover:shadow-sky-500/10 transition-all duration-300 hover:-translate-y-1.5"
-            >
-              {/* Üst Kısım: İkon ve Rozet */}
-              <div>
-                <div className="flex items-center justify-between mb-5">
-                  <div className="w-14 h-14 rounded-xl bg-slate-900 border border-slate-700/60 flex items-center justify-center group-hover:scale-110 group-hover:border-sky-400 transition-all duration-300 shadow-inner">
-                    {renderIcon(service.iconName)}
-                  </div>
-                  <span className="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-sky-950/80 text-cyan-400 border border-sky-800/60">
-                    {service.badge}
-                  </span>
+        {/* MODERN BENTO GRID MİMARİSİ (Apple / Linear Tarzı) */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
+          
+          {/* 1. Büyük Bento Kartı: Yazılım & Kurumsal Otomasyon (8 Kolon) */}
+          <div className="lg:col-span-7 pro-card rounded-3xl p-7 sm:p-8 flex flex-col justify-between group transition-all duration-300">
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-sky-500/10 border border-sky-400/20 text-sky-400 flex items-center justify-center">
+                  <Code2 className="w-6 h-6" />
                 </div>
-
-                {/* Başlık ve Açıklama */}
-                <h3 className="text-xl font-bold text-white mb-2.5 group-hover:text-cyan-400 transition-colors">
-                  {service.title}
-                </h3>
-                
-                <p className="text-sm text-slate-300 leading-relaxed mb-5">
-                  {service.shortDesc}
-                </p>
-
-                {/* Teknoloji Etiketleri */}
-                <div className="flex flex-wrap gap-1.5 mb-6">
-                  {service.technologies.slice(0, 4).map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-2 py-0.5 text-[11px] font-medium rounded-md bg-slate-800 text-slate-200 border border-slate-700/60"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                  {service.technologies.length > 4 && (
-                    <span className="px-2 py-0.5 text-[11px] font-medium rounded-md bg-sky-500/20 text-cyan-300">
-                      +{service.technologies.length - 4}
-                    </span>
-                  )}
-                </div>
-
-                {/* Öne Çıkan Özellikler */}
-                <ul className="space-y-2 mb-6 border-t border-slate-800/80 pt-4">
-                  {service.features.slice(0, 3).map((feat, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-xs text-slate-300">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
-                      <span>{feat}</span>
-                    </li>
-                  ))}
-                </ul>
+                <span className="px-3 py-1 rounded-full text-xs font-bold bg-white/[0.05] border border-white/10 text-sky-300">
+                  Özel Geliştirme
+                </span>
               </div>
 
-              {/* Alt Kısım: Butonlar */}
-              <div className="pt-4 border-t border-slate-800/80 flex flex-col gap-2">
-                <button
-                  onClick={() => openQuoteModalWithService(service.title)}
-                  className="w-full py-2.5 px-4 rounded-xl font-semibold text-xs text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-md shadow-sky-500/25 transition-all flex items-center justify-center gap-2"
-                >
-                  <span>Teklif & Keşif İste</span>
-                  <ArrowRight className="w-3.5 h-3.5" />
-                </button>
+              <h3 className="text-2xl font-black text-white mb-3 group-hover:text-sky-400 transition-colors">
+                Yazılım & Kurumsal Otomasyon
+              </h3>
 
-                <button
-                  onClick={() => setSelectedService(service)}
-                  className="w-full py-2 text-xs font-semibold text-slate-400 hover:text-cyan-400 transition-colors flex items-center justify-center gap-1"
-                >
-                  <span>Detaylı Kapsamı Gör</span>
-                  <ChevronRight className="w-3.5 h-3.5" />
-                </button>
+              <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                C#, ASP.NET Core, React ve Next.js tabanlı kurumsal otomasyonlar, depo/lojistik ERP sistemleri ve özel web portalları. Mevcut muhasebe ve üretim bantlarınızla doğrudan entegrasyon.
+              </p>
+
+              {/* Kod & Mimari Önizleme Şeridi */}
+              <div className="p-4 rounded-2xl bg-black/40 border border-white/[0.06] mb-6 font-mono text-xs text-slate-300 space-y-1.5">
+                <div className="flex items-center justify-between text-slate-400 text-[11px] pb-1 border-b border-white/[0.06]">
+                  <span>TechStack: C# • .NET 9 • PostgreSQL • React 19</span>
+                  <span className="text-emerald-400">Microservice Architecture</span>
+                </div>
+                <div className="text-sky-300">✓ Gerçek zamanlı stok ve kritik eşik SMS/Mail uyarıları</div>
+                <div className="text-slate-400">✓ Android El Terminali & Barkod / QR Entegrasyonu</div>
+              </div>
+
+              <div className="flex flex-wrap gap-2 mb-6">
+                {["C#", "ASP.NET Core", "React", "Next.js", "PostgreSQL", "Docker", "REST API"].map((t) => (
+                  <span key={t} className="px-2.5 py-1 rounded-lg bg-white/[0.03] text-slate-300 text-xs font-semibold border border-white/[0.06]">
+                    {t}
+                  </span>
+                ))}
               </div>
             </div>
-          ))}
-        </div>
 
-        {/* Alt Bilgi Bandı */}
-        <div className="mt-12 rounded-2xl bg-gradient-to-r from-sky-900/30 via-blue-900/20 to-indigo-900/30 border border-sky-500/20 p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <div className="text-center sm:text-left">
-            <h4 className="text-base font-bold text-slate-900 dark:text-white">
-              Trakya Bölgesindeki Fabrikanız veya Ofisiniz İçin Ücretsiz Keşif
-            </h4>
-            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 mt-0.5">
-              Lüleburgaz, Çorlu, Kırklareli, Çerkezköy ve Edirne sahalarında yerinde teknik inceleme yapıyoruz.
-            </p>
+            <div className="pt-4 border-t border-white/[0.08] flex items-center justify-between">
+              <button
+                onClick={() => openQuoteModalWithService("Yazılım & Kurumsal Otomasyon")}
+                className="px-5 py-2.5 rounded-full text-xs font-bold text-white bg-sky-500 hover:bg-sky-400 transition-colors flex items-center gap-1.5 shadow-md shadow-sky-500/20"
+              >
+                <span>Yazılım Teklifi Al</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+
+              <button
+                onClick={() => setSelectedService(servicesData[0])}
+                className="text-xs font-semibold text-slate-400 hover:text-white transition-colors flex items-center gap-1"
+              >
+                <span>Detaylı Kapsam</span>
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
           </div>
-          <button
-            onClick={() => openQuoteModalWithService("Ücretsiz Saha Keşfi")}
-            className="shrink-0 px-6 py-3 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-sky-500 hover:bg-sky-400 shadow-lg shadow-sky-500/25 transition-all"
-          >
-            Hemen Keşif Planla
-          </button>
+
+          {/* 2. Bento Kartı: Ağ ve Güvenlik Sistemleri (5 Kolon) */}
+          <div className="lg:col-span-5 pro-card rounded-3xl p-7 sm:p-8 flex flex-col justify-between group transition-all duration-300">
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-400/20 text-blue-400 flex items-center justify-center">
+                  <ShieldCheck className="w-6 h-6" />
+                </div>
+                <span className="px-3 py-1 rounded-full text-xs font-bold bg-white/[0.05] border border-white/10 text-blue-300">
+                  Anahtar Teslim Altyapı
+                </span>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl font-black text-white mb-3 group-hover:text-sky-400 transition-colors">
+                Ağ ve Güvenlik Sistemleri
+              </h3>
+
+              <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                Hikvision ve Dahua 4K IP kameralar, NVR depolama üniteleri ve Cisco/MikroTik yönetilebilir fiber switch kurulumları.
+              </p>
+
+              <ul className="space-y-2.5 mb-6 text-xs text-slate-300">
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
+                  <span>4K AI İnsan ve Araç Sınıflandırma</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
+                  <span>Yedekli Fiber Optik Omurga Kablolama</span>
+                </li>
+                <li className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
+                  <span>5651 Sayılı Kanuna Uyumlu Firewall</span>
+                </li>
+              </ul>
+            </div>
+
+            <div className="pt-4 border-t border-white/[0.08] flex items-center justify-between">
+              <button
+                onClick={() => openQuoteModalWithService("Ağ ve Güvenlik Sistemleri")}
+                className="px-5 py-2.5 rounded-full text-xs font-bold text-white bg-sky-500 hover:bg-sky-400 transition-colors flex items-center gap-1.5 shadow-md shadow-sky-500/20"
+              >
+                <span>Keşif & Fiyat İste</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+
+              <button
+                onClick={() => setSelectedService(servicesData[1])}
+                className="text-xs font-semibold text-slate-400 hover:text-white transition-colors flex items-center gap-1"
+              >
+                <span>Detayları Gör</span>
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </div>
+
+          {/* 3. Bento Kartı: 3D Özel Çözümler & Saha Aparatları (5 Kolon) */}
+          <div className="lg:col-span-5 pro-card rounded-3xl p-7 sm:p-8 flex flex-col justify-between group transition-all duration-300">
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-cyan-500/10 border border-cyan-400/20 text-cyan-400 flex items-center justify-center">
+                  <Cpu className="w-6 h-6" />
+                </div>
+                <span className="px-3 py-1 rounded-full text-xs font-bold bg-white/[0.05] border border-white/10 text-cyan-300">
+                  Özel CAD Üretim
+                </span>
+              </div>
+
+              <h3 className="text-xl sm:text-2xl font-black text-white mb-3 group-hover:text-cyan-400 transition-colors">
+                3D Özel Çözümler & Saha Aparatları
+              </h3>
+
+              <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                Standart vidalama ve ayakların yetersiz kaldığı direk, kolon veya dar kabinet alanları için endüstriyel 3D yazıcılarla basılan karbonlu PETG aparatlar.
+              </p>
+
+              <div className="p-3.5 rounded-2xl bg-black/40 border border-white/[0.06] mb-6 text-xs text-slate-300 space-y-1.5">
+                <div className="text-cyan-300 font-semibold">• UV Işınlarına ve Dış Hava Şartlarına Tam Uyumlu</div>
+                <div className="text-slate-400">• Standart Kameralar & NVR'lar için Milimetrik Uyum</div>
+              </div>
+            </div>
+
+            <div className="pt-4 border-t border-white/[0.08] flex items-center justify-between">
+              <button
+                onClick={() => openQuoteModalWithService("3D Özel Çözümler")}
+                className="px-5 py-2.5 rounded-full text-xs font-bold text-white bg-sky-500 hover:bg-sky-400 transition-colors flex items-center gap-1.5"
+              >
+                <span>Aparat Tasarımı İste</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+
+              <button
+                onClick={() => setSelectedService(servicesData[3])}
+                className="text-xs font-semibold text-slate-400 hover:text-white transition-colors flex items-center gap-1"
+              >
+                <span>Teknik Özellikler</span>
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </div>
+
+          {/* 4. Bento Kartı: Donanım & E-Ticaret Tedariği (7 Kolon) */}
+          <div className="lg:col-span-7 pro-card rounded-3xl p-7 sm:p-8 flex flex-col justify-between group transition-all duration-300">
+            <div>
+              <div className="flex items-center justify-between mb-6">
+                <div className="w-12 h-12 rounded-2xl bg-indigo-500/10 border border-indigo-400/20 text-indigo-400 flex items-center justify-center">
+                  <Server className="w-6 h-6" />
+                </div>
+                <span className="px-3 py-1 rounded-full text-xs font-bold bg-white/[0.05] border border-white/10 text-indigo-300">
+                  Distribütör Güvencesi
+                </span>
+              </div>
+
+              <h3 className="text-2xl font-black text-white mb-3 group-hover:text-indigo-300 transition-colors">
+                Donanım & E-Ticaret Tedariği
+              </h3>
+
+              <p className="text-sm text-slate-300 leading-relaxed mb-6">
+                Kurumsal iş istasyonları, ECC sunucu bellekleri, yüksek hızlı NVMe depolama üniteleri ve yedekli güç kaynakları. Lüleburgaz içi aynı gün teslimat ve yerinde montaj opsiyonu.
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 text-xs text-slate-300">
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
+                  <span>2 ila 5 Yıl Resmi Distribütör Garantisi</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
+                  <span>Stres Testi & Performans Raporu</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
+                  <span>Lüleburgaz ve Çevresine Hızlı Kurye</span>
+                </div>
+                <div className="flex items-center gap-2">
+                  <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
+                  <span>İşletim Sistemi & Sürücü Kurulumu Dahil</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="pt-4 border-t border-white/[0.08] flex items-center justify-between">
+              <Link
+                href="/magaza"
+                className="px-5 py-2.5 rounded-full text-xs font-bold text-white bg-sky-500 hover:bg-sky-400 transition-colors flex items-center gap-1.5 shadow-md shadow-sky-500/20"
+              >
+                <span>Donanım Mağazasına Git</span>
+                <ArrowRight className="w-3.5 h-3.5" />
+              </Link>
+
+              <button
+                onClick={() => setSelectedService(servicesData[2])}
+                className="text-xs font-semibold text-slate-400 hover:text-white transition-colors flex items-center gap-1"
+              >
+                <span>Parça Kapsamı</span>
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
+          </div>
+
         </div>
 
       </div>
 
-      {/* Hizmet Detay Modal Penceresi */}
+      {/* Modal Detay */}
       {selectedService && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-in fade-in duration-200">
-          <div className="relative w-full max-w-2xl bg-white dark:bg-[#0d1726] border border-sky-500/30 rounded-2xl p-6 sm:p-8 shadow-2xl overflow-y-auto max-h-[90vh]">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-md animate-in fade-in duration-200">
+          <div className="relative w-full max-w-2xl bg-[#090e1a] border border-white/10 rounded-3xl p-6 sm:p-8 shadow-2xl overflow-y-auto max-h-[90vh] text-white">
             <button
               onClick={() => setSelectedService(null)}
-              className="absolute top-4 right-4 p-2 text-slate-400 hover:text-white hover:bg-slate-800 rounded-lg transition-colors"
+              className="absolute top-5 right-5 p-2 text-slate-400 hover:text-white rounded-lg transition-colors"
             >
               ✕
             </button>
 
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-500/30 flex items-center justify-center">
-                {renderIcon(selectedService.iconName)}
-              </div>
-              <div>
-                <span className="text-xs font-semibold text-cyan-400 uppercase tracking-wider">
-                  {selectedService.badge}
-                </span>
-                <h3 className="text-2xl font-bold text-slate-900 dark:text-white">
-                  {selectedService.title}
-                </h3>
-              </div>
-            </div>
+            <span className="text-xs font-bold text-sky-400 uppercase tracking-wider block mb-1">
+              {selectedService.badge}
+            </span>
+            <h3 className="text-2xl font-bold mb-4">
+              {selectedService.title}
+            </h3>
 
-            <p className="text-slate-600 dark:text-slate-300 text-sm leading-relaxed mb-6">
+            <p className="text-sm text-slate-300 leading-relaxed mb-6">
               {selectedService.fullDesc}
             </p>
 
-            <div className="space-y-4 mb-6">
-              <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">
-                Kapsam & Özellikler
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                {selectedService.features.map((item, i) => (
-                  <div key={i} className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300">
-                    <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
-                    <span>{item}</span>
+            <div className="space-y-3 mb-6">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-slate-400">Teknik Kapsam:</h4>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
+                {selectedService.features.map((f, i) => (
+                  <div key={i} className="flex items-center gap-2">
+                    <CheckCircle2 className="w-3.5 h-3.5 text-sky-400 shrink-0" />
+                    <span>{f}</span>
                   </div>
                 ))}
               </div>
             </div>
 
-            <div className="space-y-4 mb-6">
-              <h4 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider">
-                Teslim Edilenler & Güvenceler
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
-                {selectedService.deliverables.map((item, i) => (
-                  <div key={i} className="flex items-start gap-2 text-xs text-slate-700 dark:text-slate-300">
-                    <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
-                    <span>{item}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="p-3.5 rounded-xl bg-sky-950/40 border border-sky-500/20 text-xs text-sky-200 mb-6">
-              <strong>Bölgesel Avantaj:</strong> {selectedService.regionalAdvantage}
-            </div>
-
-            <div className="flex items-center justify-end gap-3 pt-4 border-t border-slate-200 dark:border-slate-800">
+            <div className="flex justify-end gap-3 pt-4 border-t border-white/10">
               <button
                 onClick={() => setSelectedService(null)}
-                className="px-5 py-2.5 rounded-xl text-xs font-semibold text-slate-400 hover:text-white hover:bg-slate-800 transition-colors"
+                className="px-4 py-2 rounded-full text-xs font-semibold text-slate-400 hover:text-white"
               >
                 Kapat
               </button>
               <button
                 onClick={() => {
-                  const title = selectedService.title;
+                  const t = selectedService.title;
                   setSelectedService(null);
-                  openQuoteModalWithService(title);
+                  openQuoteModalWithService(t);
                 }}
-                className="px-6 py-2.5 rounded-xl text-xs font-bold text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-lg shadow-sky-500/25"
+                className="px-6 py-2 rounded-full text-xs font-bold text-white bg-sky-500 hover:bg-sky-400"
               >
-                Bu Hizmet İçin Teklif İste
+                Bu Hizmet İçin Teklif Al
               </button>
             </div>
           </div>

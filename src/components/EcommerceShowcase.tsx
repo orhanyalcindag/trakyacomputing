@@ -51,18 +51,18 @@ export default function EcommerceShowcase() {
   ];
 
   return (
-    <section id="magaza" className="py-24 relative bg-white dark:bg-[#070d19] tech-grid">
+    <section id="magaza" className="py-24 relative bg-[#030712] border-t border-white/[0.06]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Başlık Alanı ve Kategori Filtreleri */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/15 text-cyan-400 text-xs font-bold tracking-wider uppercase border border-cyan-400/30">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] text-sky-400 text-xs font-semibold uppercase tracking-wider border border-white/[0.1]">
               <Sparkles className="w-3.5 h-3.5" />
               <span>Donanım & E-Ticaret Vitrini</span>
             </div>
             
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight drop-shadow-sm">
+            <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
               Öne Çıkan Donanım & Güvenlik Ekipmanları
             </h2>
             
@@ -72,15 +72,15 @@ export default function EcommerceShowcase() {
           </div>
 
           {/* Kategori Filtre Butonları */}
-          <div className="flex flex-wrap items-center gap-2 bg-slate-900 p-1.5 rounded-xl border border-slate-800">
+          <div className="flex flex-wrap items-center gap-1.5 bg-black/40 p-1 rounded-2xl border border-white/[0.08]">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setSelectedCategory(cat.id)}
-                className={`px-3.5 py-1.5 rounded-lg text-xs font-semibold transition-all duration-200 ${
+                className={`px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all duration-200 ${
                   selectedCategory === cat.id
-                    ? "bg-sky-500 text-white shadow-md shadow-sky-500/25"
-                    : "text-slate-300 hover:text-white hover:bg-slate-800"
+                    ? "bg-white/10 text-white shadow-sm"
+                    : "text-slate-400 hover:text-white"
                 }`}
               >
                 {cat.label}
@@ -90,9 +90,9 @@ export default function EcommerceShowcase() {
         </div>
 
         {/* Bölgesel Kurulum Vurgusu Banner'ı */}
-        <div className="mb-8 p-4 rounded-xl bg-gradient-to-r from-sky-950/70 via-blue-950/60 to-slate-900/80 border border-sky-500/30 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
-          <div className="flex items-center gap-3">
-            <div className="p-2 rounded-lg bg-cyan-500/20 text-cyan-400">
+        <div className="mb-8 p-5 rounded-3xl pro-card flex flex-col sm:flex-row items-center justify-between gap-4 text-xs">
+          <div className="flex items-center gap-3.5">
+            <div className="p-2.5 rounded-2xl bg-sky-500/10 text-sky-400 border border-sky-400/20">
               <Wrench className="w-5 h-5" />
             </div>
             <div>
@@ -100,7 +100,7 @@ export default function EcommerceShowcase() {
               <p className="text-slate-300">Lüleburgaz ve Trakya bölgesindeki siparişlerinizde uzman ekibimizle yerinde montaj ve devreye alma opsiyonu.</p>
             </div>
           </div>
-          <span className="shrink-0 px-3 py-1.5 rounded-lg bg-cyan-400/10 text-cyan-300 font-bold border border-cyan-400/30">
+          <span className="shrink-0 px-3.5 py-1.5 rounded-full bg-white/[0.04] text-sky-300 font-bold border border-white/[0.08]">
             Yerinde Montaj Desteği
           </span>
         </div>
@@ -113,11 +113,11 @@ export default function EcommerceShowcase() {
             return (
               <div
                 key={product.id}
-                className="group relative flex flex-col justify-between rounded-2xl bg-[#0d1726] border border-slate-800 hover:border-sky-500/50 shadow-lg hover:shadow-xl hover:shadow-sky-500/10 transition-all duration-300 overflow-hidden"
+                className="group relative flex flex-col justify-between rounded-3xl pro-card transition-all duration-300 overflow-hidden"
               >
                 {/* Rozet */}
                 {product.badge && (
-                  <div className="absolute top-3 left-3 z-10 px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wide uppercase bg-gradient-to-r from-sky-500 to-blue-600 text-white shadow-md">
+                  <div className="absolute top-3.5 left-3.5 z-10 px-2.5 py-1 rounded-full text-[10px] font-bold tracking-wide uppercase bg-sky-500 text-white shadow-md">
                     {product.badge}
                   </div>
                 )}
@@ -125,21 +125,21 @@ export default function EcommerceShowcase() {
                 {/* Hızlı İnceleme Butonu */}
                 <button
                   onClick={() => setQuickViewProduct(product)}
-                  className="absolute top-3 right-3 z-10 p-2 rounded-full bg-slate-900/80 text-slate-200 hover:text-white hover:bg-slate-900 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity"
+                  className="absolute top-3.5 right-3.5 z-10 p-2 rounded-full bg-black/60 text-slate-300 hover:text-white hover:bg-black/80 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity border border-white/10"
                   title="Hızlı İncele"
                 >
                   <Eye className="w-4 h-4" />
                 </button>
 
                 {/* Ürün Görseli */}
-                <div className="relative w-full h-48 bg-slate-900 overflow-hidden">
+                <div className="relative w-full h-48 bg-slate-950 overflow-hidden">
                   <img
                     src={product.image}
                     alt={product.name}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0d1726] via-transparent to-transparent opacity-60" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#090e1a] via-transparent to-transparent opacity-80" />
                 </div>
 
                 {/* Ürün Bilgileri */}
@@ -147,7 +147,7 @@ export default function EcommerceShowcase() {
                   <div>
                     {/* Kategori ve Değerlendirme */}
                     <div className="flex items-center justify-between text-xs mb-2">
-                      <span className="text-cyan-400 font-bold">
+                      <span className="text-sky-400 font-bold">
                         {product.categoryLabel}
                       </span>
                       <div className="flex items-center gap-1 text-amber-400">
@@ -155,29 +155,29 @@ export default function EcommerceShowcase() {
                         <span className="font-bold text-slate-200">
                           {product.rating}
                         </span>
-                        <span className="text-slate-400">({product.reviewsCount})</span>
+                        <span className="text-slate-500">({product.reviewsCount})</span>
                       </div>
                     </div>
 
                     {/* Ürün İsmi */}
-                    <h3 className="font-bold text-base text-white mb-2 line-clamp-2 group-hover:text-cyan-400 transition-colors">
+                    <h3 className="font-bold text-sm text-white mb-2 line-clamp-2 group-hover:text-sky-300 transition-colors">
                       {product.name}
                     </h3>
 
                     {/* Kısa Açıklama */}
-                    <p className="text-xs text-slate-300 line-clamp-2 mb-4 leading-relaxed">
+                    <p className="text-xs text-slate-400 line-clamp-2 mb-4 leading-relaxed">
                       {product.shortDesc}
                     </p>
                   </div>
 
                   {/* Fiyat ve Sepete Ekle Butonu */}
-                  <div className="pt-3 border-t border-slate-800">
+                  <div className="pt-3 border-t border-white/[0.08]">
                     <div className="flex items-baseline gap-2 mb-3">
                       <span className="text-xl font-black text-white">
                         {product.price.toLocaleString("tr-TR")} ₺
                       </span>
                       {product.oldPrice && (
-                        <span className="text-xs text-slate-400 line-through">
+                        <span className="text-xs text-slate-500 line-through">
                           {product.oldPrice.toLocaleString("tr-TR")} ₺
                         </span>
                       )}
@@ -185,10 +185,10 @@ export default function EcommerceShowcase() {
 
                     <button
                       onClick={() => handleAddToCart(product)}
-                      className={`w-full py-2.5 px-4 rounded-xl font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-200 ${
+                      className={`w-full py-2.5 px-4 rounded-full font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-200 ${
                         isAdded
                           ? "bg-emerald-600 text-white"
-                          : "bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 text-white shadow-md shadow-sky-500/25"
+                          : "bg-white/[0.06] hover:bg-sky-500 hover:text-white text-slate-200 border border-white/[0.1] hover:border-sky-400"
                       }`}
                     >
                       {isAdded ? (
