@@ -44,16 +44,16 @@ export default function ServicesSection() {
         
         {/* Bölüm Başlığı */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 dark:bg-sky-500/10 border border-sky-500/20 text-sky-600 dark:text-sky-400 text-xs font-bold tracking-wider uppercase">
-            <Sparkles className="w-3.5 h-3.5 text-cyan-500" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/15 border border-sky-400/30 text-cyan-400 text-xs font-bold tracking-wider uppercase">
+            <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
             <span>Bütünleşik BT Çözümleri</span>
           </div>
           
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight drop-shadow-sm">
             İşletmenizin İhtiyaç Duyduğu Tüm Teknoloji Tek Çatı Altında
           </h2>
           
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400">
+          <p className="text-base sm:text-lg text-slate-300">
             Yazılımdan donanıma, kamera güvenliğinden sahaya özel 3D aparat üretimine kadar Trakya genelinde uçtan uca anahtar teslim hizmet.
           </p>
         </div>
@@ -63,25 +63,25 @@ export default function ServicesSection() {
           {servicesData.map((service, index) => (
             <div
               key={service.id}
-              className="group relative flex flex-col justify-between rounded-2xl bg-white dark:bg-[#0d1726] border border-slate-200 dark:border-slate-800/80 hover:border-sky-500/50 p-6 shadow-sm hover:shadow-xl hover:shadow-sky-500/10 transition-all duration-300 hover:-translate-y-1.5"
+              className="group relative flex flex-col justify-between rounded-2xl bg-[#0d1726] border border-slate-800 hover:border-sky-500/50 p-6 shadow-lg hover:shadow-xl hover:shadow-sky-500/10 transition-all duration-300 hover:-translate-y-1.5"
             >
               {/* Üst Kısım: İkon ve Rozet */}
               <div>
                 <div className="flex items-center justify-between mb-5">
-                  <div className="w-14 h-14 rounded-xl bg-slate-100 dark:bg-slate-900/90 border border-slate-200 dark:border-slate-700/60 flex items-center justify-center group-hover:scale-110 group-hover:border-sky-400 transition-all duration-300 shadow-inner">
+                  <div className="w-14 h-14 rounded-xl bg-slate-900 border border-slate-700/60 flex items-center justify-center group-hover:scale-110 group-hover:border-sky-400 transition-all duration-300 shadow-inner">
                     {renderIcon(service.iconName)}
                   </div>
-                  <span className="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-cyan-400 border border-sky-200 dark:border-sky-800/50">
+                  <span className="px-2.5 py-1 rounded-full text-[11px] font-semibold bg-sky-950/80 text-cyan-400 border border-sky-800/60">
                     {service.badge}
                   </span>
                 </div>
 
                 {/* Başlık ve Açıklama */}
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2.5 group-hover:text-sky-500 dark:group-hover:text-cyan-400 transition-colors">
+                <h3 className="text-xl font-bold text-white mb-2.5 group-hover:text-cyan-400 transition-colors">
                   {service.title}
                 </h3>
                 
-                <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-5">
+                <p className="text-sm text-slate-300 leading-relaxed mb-5">
                   {service.shortDesc}
                 </p>
 
@@ -90,23 +90,23 @@ export default function ServicesSection() {
                   {service.technologies.slice(0, 4).map((tech) => (
                     <span
                       key={tech}
-                      className="px-2 py-0.5 text-[11px] font-medium rounded-md bg-slate-100 dark:bg-slate-800/70 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700/50"
+                      className="px-2 py-0.5 text-[11px] font-medium rounded-md bg-slate-800 text-slate-200 border border-slate-700/60"
                     >
                       {tech}
                     </span>
                   ))}
                   {service.technologies.length > 4 && (
-                    <span className="px-2 py-0.5 text-[11px] font-medium rounded-md bg-sky-500/10 text-sky-400">
+                    <span className="px-2 py-0.5 text-[11px] font-medium rounded-md bg-sky-500/20 text-cyan-300">
                       +{service.technologies.length - 4}
                     </span>
                   )}
                 </div>
 
                 {/* Öne Çıkan Özellikler */}
-                <ul className="space-y-2 mb-6 border-t border-slate-100 dark:border-slate-800/60 pt-4">
+                <ul className="space-y-2 mb-6 border-t border-slate-800/80 pt-4">
                   {service.features.slice(0, 3).map((feat, idx) => (
-                    <li key={idx} className="flex items-start gap-2 text-xs text-slate-600 dark:text-slate-300">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-cyan-500 shrink-0 mt-0.5" />
+                    <li key={idx} className="flex items-start gap-2 text-xs text-slate-300">
+                      <CheckCircle2 className="w-3.5 h-3.5 text-cyan-400 shrink-0 mt-0.5" />
                       <span>{feat}</span>
                     </li>
                   ))}
@@ -114,10 +114,10 @@ export default function ServicesSection() {
               </div>
 
               {/* Alt Kısım: Butonlar */}
-              <div className="pt-4 border-t border-slate-100 dark:border-slate-800/60 flex flex-col gap-2">
+              <div className="pt-4 border-t border-slate-800/80 flex flex-col gap-2">
                 <button
                   onClick={() => openQuoteModalWithService(service.title)}
-                  className="w-full py-2.5 px-4 rounded-xl font-semibold text-xs text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-md shadow-sky-500/20 transition-all flex items-center justify-center gap-2"
+                  className="w-full py-2.5 px-4 rounded-xl font-semibold text-xs text-white bg-gradient-to-r from-sky-500 to-blue-600 hover:from-sky-400 hover:to-blue-500 shadow-md shadow-sky-500/25 transition-all flex items-center justify-center gap-2"
                 >
                   <span>Teklif & Keşif İste</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -125,7 +125,7 @@ export default function ServicesSection() {
 
                 <button
                   onClick={() => setSelectedService(service)}
-                  className="w-full py-2 text-xs font-medium text-slate-500 dark:text-slate-400 hover:text-sky-500 dark:hover:text-cyan-400 transition-colors flex items-center justify-center gap-1"
+                  className="w-full py-2 text-xs font-semibold text-slate-400 hover:text-cyan-400 transition-colors flex items-center justify-center gap-1"
                 >
                   <span>Detaylı Kapsamı Gör</span>
                   <ChevronRight className="w-3.5 h-3.5" />

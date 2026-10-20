@@ -72,16 +72,16 @@ export default function WhyUsSection() {
         
         {/* Bölüm Başlığı */}
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/10 text-sky-600 dark:text-cyan-400 text-xs font-bold tracking-wider uppercase border border-sky-500/20">
-            <Award className="w-3.5 h-3.5 text-cyan-500" />
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-sky-500/15 text-cyan-400 text-xs font-bold tracking-wider uppercase border border-sky-400/30">
+            <Award className="w-3.5 h-3.5 text-cyan-400" />
             <span>Neden Trakyacomputing?</span>
           </div>
 
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+          <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight drop-shadow-sm">
             Trakya Bölgesine Özel Yerinde, Anında ve Anahtar Teslim Güç
           </h2>
 
-          <p className="text-base sm:text-lg text-slate-600 dark:text-slate-400">
+          <p className="text-base sm:text-lg text-slate-300">
             İstanbul merkezli firmaların günler sonra gelen servisleri yerine, 30 dakika mesafedeki kendi mühendislerimizle yanınızdayız.
           </p>
         </div>
@@ -91,22 +91,22 @@ export default function WhyUsSection() {
           {advantages.map((adv, idx) => (
             <div
               key={idx}
-              className="p-7 rounded-2xl bg-white dark:bg-[#0d1726] border border-slate-200 dark:border-slate-800 hover:border-sky-500/40 shadow-sm hover:shadow-xl hover:shadow-sky-500/10 transition-all duration-300 group"
+              className="p-7 rounded-2xl bg-[#0d1726] border border-slate-800 hover:border-sky-500/40 shadow-lg hover:shadow-xl hover:shadow-sky-500/10 transition-all duration-300 group"
             >
               <div className="flex items-center justify-between mb-5">
-                <div className="w-12 h-12 rounded-xl bg-slate-100 dark:bg-slate-900 flex items-center justify-center border border-slate-200 dark:border-slate-800 group-hover:scale-110 group-hover:border-sky-400 transition-all">
+                <div className="w-12 h-12 rounded-xl bg-slate-900 flex items-center justify-center border border-slate-750 group-hover:scale-110 group-hover:border-sky-400 transition-all">
                   {adv.icon}
                 </div>
-                <span className="text-[11px] font-bold text-sky-600 dark:text-cyan-400 bg-sky-50 dark:bg-sky-950/60 px-2.5 py-1 rounded-full border border-sky-200 dark:border-sky-800/40">
+                <span className="text-[11px] font-bold text-cyan-400 bg-sky-950/80 px-2.5 py-1 rounded-full border border-sky-800/40">
                   {adv.badge}
                 </span>
               </div>
 
-              <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2.5 group-hover:text-sky-500 dark:group-hover:text-cyan-400 transition-colors">
+              <h3 className="text-lg font-bold text-white mb-2.5 group-hover:text-cyan-400 transition-colors">
                 {adv.title}
               </h3>
 
-              <p className="text-sm text-slate-600 dark:text-slate-400 leading-relaxed">
+              <p className="text-sm text-slate-300 leading-relaxed">
                 {adv.description}
               </p>
             </div>

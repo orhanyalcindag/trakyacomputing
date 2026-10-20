@@ -24,23 +24,23 @@ export default function ProjectsShowcase() {
         {/* Başlık Alanı */}
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-14 gap-6">
           <div className="space-y-3">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 text-blue-500 text-xs font-bold tracking-wider uppercase border border-blue-500/20">
-              <Sparkles className="w-3.5 h-3.5" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/15 text-cyan-400 text-xs font-bold tracking-wider uppercase border border-blue-400/30">
+              <Sparkles className="w-3.5 h-3.5 text-cyan-400" />
               <span>Saha Referansları</span>
             </div>
 
-            <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white tracking-tight">
+            <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight drop-shadow-sm">
               Trakya Genelinde Tamamlanan Başarı Hikayeleri
             </h2>
 
-            <p className="text-slate-600 dark:text-slate-400 text-sm sm:text-base max-w-xl">
+            <p className="text-slate-300 text-sm sm:text-base max-w-xl">
               Sanayi tesislerinden lojistik üslerine kadar sahada kanıtlanmış bütünleşik teknoloji ve altyapı çözümlerimiz.
             </p>
           </div>
 
           <Link
             href="/projelerimiz"
-            className="inline-flex items-center gap-2 text-sm font-bold text-sky-500 hover:text-sky-400 transition-colors"
+            className="inline-flex items-center gap-2 text-sm font-bold text-cyan-400 hover:text-white transition-colors"
           >
             <span>Tüm Projeleri ve Vaka Analizlerini Gör</span>
             <ArrowRight className="w-4 h-4" />
@@ -86,20 +86,20 @@ export default function ProjectsShowcase() {
               {/* İçerik */}
               <div className="p-7 flex-1 flex flex-col justify-between">
                 <div>
-                  <div className="text-xs font-bold text-sky-600 dark:text-cyan-400 uppercase tracking-wider mb-1">
+                  <div className="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-1">
                     {proj.client}
                   </div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-sky-500 dark:group-hover:text-cyan-400 transition-colors">
+                  <h3 className="text-xl font-bold text-white mb-3 group-hover:text-cyan-400 transition-colors">
                     {proj.title}
                   </h3>
-                  <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-400 leading-relaxed mb-5">
+                  <p className="text-xs sm:text-sm text-slate-300 leading-relaxed mb-5">
                     {proj.summary}
                   </p>
 
                   {/* Sonuç Vurguları */}
                   <div className="space-y-2 mb-6">
                     {proj.results.slice(0, 2).map((res, i) => (
-                      <div key={i} className="flex items-center gap-2 text-xs text-slate-700 dark:text-slate-300">
+                      <div key={i} className="flex items-center gap-2 text-xs text-slate-200">
                         <CheckCircle2 className="w-4 h-4 text-emerald-400 shrink-0" />
                         <span className="font-medium">{res}</span>
                       </div>
@@ -109,7 +109,7 @@ export default function ProjectsShowcase() {
 
                 <button
                   onClick={() => setSelectedProject(proj)}
-                  className="w-full py-3 px-4 rounded-xl font-bold text-xs uppercase tracking-wider text-slate-800 dark:text-slate-200 bg-slate-200/80 dark:bg-slate-800/80 hover:bg-sky-500 hover:text-white dark:hover:bg-sky-500 dark:hover:text-white transition-all flex items-center justify-center gap-2"
+                  className="w-full py-3 px-4 rounded-xl font-bold text-xs uppercase tracking-wider text-white bg-slate-800 hover:bg-sky-500 transition-all flex items-center justify-center gap-2 border border-slate-700"
                 >
                   <span>Vaka Analizi & Teknik Kapsamı İncele</span>
                   <ArrowUpRight className="w-4 h-4" />
