@@ -126,7 +126,7 @@ export const productsData: ProductItem[] = [
     inStock: true,
     stockCount: 85,
     badge: "Özel Üretim",
-    image: "/products/braket.svg",
+    image: "/products/braket.svg?v=2",
     shortDesc: "Kamera montajında standart vidaların oturmadığı direk, boru ve kolonlar için karbon takviyeli PETG kompozit filament ile basılmış yüksek mukavemetli braket.",
     specs: {
       "Malzeme": "Karbon Fiber Takviyeli Endüstriyel PETG Plastik",
