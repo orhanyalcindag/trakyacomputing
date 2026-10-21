@@ -41,7 +41,7 @@ export const projectsData: ProjectItem[] = [
       "Yerel Ekiple 15 Dakikada Arıza Müdahalesi"
     ],
     year: "2024",
-    image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
+    image: "/images/projects/proj_osb_factory.jpg"
   },
   {
     id: "proj-depo-erp",
@@ -64,7 +64,7 @@ export const projectsData: ProjectItem[] = [
       "Canlı Dashboard ile Yönetimsel Şeffaflık"
     ],
     year: "2024",
-    image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=800&q=80"
+    image: "/images/projects/proj_warehouse_erp.jpg"
   },
   {
     id: "proj-tarim-iot",
@@ -87,7 +87,7 @@ export const projectsData: ProjectItem[] = [
       "Çiftlik Genelinde 7/24 Kesintisiz Takip"
     ],
     year: "2023",
-    image: "https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&w=800&q=80"
+    image: "/images/projects/proj_smart_farm.jpg"
   },
   {
     id: "proj-edirne-lojistik",
@@ -110,6 +110,6 @@ export const projectsData: ProjectItem[] = [
       "Bölgesel Destek Güvencesi"
     ],
     year: "2023",
-    image: "https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=800&q=80"
+    image: "/images/projects/proj_border_logistics.jpg"
   }
 ];

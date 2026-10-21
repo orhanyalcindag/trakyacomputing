@@ -132,11 +132,11 @@ export default function EcommerceShowcase() {
                 </button>
 
                 {/* Ürün Görseli */}
-                <div className="relative w-full h-48 bg-[#0b1329] overflow-hidden flex items-center justify-center border-b border-white/[0.06]">
+                <div className="relative w-full h-52 bg-[#0b1329] overflow-hidden flex items-center justify-center border-b border-white/[0.06]">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full object-contain p-2.5 group-hover:scale-105 transition-transform duration-300"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     loading="eager"
                   />
                 </div>

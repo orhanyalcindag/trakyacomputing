@@ -52,13 +52,23 @@ export default function HeroSection() {
 
   return (
     <section className="relative min-h-[92vh] pt-32 sm:pt-36 pb-20 flex items-center justify-center overflow-hidden bg-[#030712]">
+      {/* Arka Plan Gerçek Veri Merkezi Atmosferi */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/images/hero/hero_datacenter.jpg"
+          alt="Trakya Veri Merkezi & BT Altyapısı"
+          className="w-full h-full object-cover opacity-20 filter brightness-75 scale-105"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#030712]/90 via-[#030712]/70 to-[#030712]" />
+      </div>
+
       {/* 1. Profesyonel Maskeli İnce Grid Deseni */}
-      <div className="absolute inset-0 subtle-grid pointer-events-none" />
+      <div className="absolute inset-0 subtle-grid pointer-events-none z-[1]" />
 
       {/* 2. Yumuşak Atmosferik Işık Huzmeleri */}
-      <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[650px] h-[350px] bg-gradient-to-b from-sky-500/18 via-blue-600/10 to-transparent rounded-full blur-3xl pointer-events-none animate-soft-pulse" />
-      <div className="absolute top-1/3 -left-40 w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-10 -right-40 w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[650px] h-[350px] bg-gradient-to-b from-sky-500/18 via-blue-600/10 to-transparent rounded-full blur-3xl pointer-events-none animate-soft-pulse z-[1]" />
+      <div className="absolute top-1/3 -left-40 w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-3xl pointer-events-none z-[1]" />
+      <div className="absolute bottom-10 -right-40 w-[400px] h-[400px] bg-indigo-600/10 rounded-full blur-3xl pointer-events-none z-[1]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
@@ -238,9 +248,9 @@ export default function HeroSection() {
                   <div className="space-y-3 animate-in fade-in duration-200">
                     <div className="relative rounded-2xl overflow-hidden h-48 bg-slate-950 border border-white/[0.08]">
                       <img
-                        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=800&q=80"
-                        alt="Fabrika IP Kamera"
-                        className="w-full h-full object-cover opacity-75"
+                        src="/products/kamera.jpg"
+                        alt="Hikvision 4K IP Kamera"
+                        className="w-full h-full object-cover opacity-85"
                       />
                       
                       <div className="absolute top-2.5 left-2.5 right-2.5 flex items-center justify-between text-[11px] font-mono text-white bg-black/70 px-2.5 py-1 rounded-lg backdrop-blur-md border border-white/10">
@@ -393,11 +403,11 @@ export default function HeroSection() {
 
                       <div className="relative h-28 rounded-xl overflow-hidden bg-slate-950 flex items-center justify-center border border-white/[0.06]">
                         <img
-                          src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=600&q=80"
-                          alt="3D Baskı Aparat"
-                          className="w-full h-full object-cover opacity-60"
+                          src="/products/braket.jpg"
+                          alt="3D Karbon Takviyeli Braket"
+                          className="w-full h-full object-cover opacity-80"
                         />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent flex items-center justify-center">
+                        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-transparent flex items-center justify-center">
                           <span className="px-3 py-1 rounded-full bg-sky-950/90 text-sky-300 border border-sky-400/40 text-[11px] font-mono font-bold">
                             Karbon Takviyeli PETG Kompozit (IP67)
                           </span>

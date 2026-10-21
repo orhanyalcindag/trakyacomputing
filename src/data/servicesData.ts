@@ -10,6 +10,7 @@ export interface ServiceItem {
   fullDesc: string;
   iconName: "Code" | "ShieldCheck" | "Server" | "Cpu" | "Layers";
   badge: string;
+  image: string;
   technologies: string[];
   features: string[];
   deliverables: string[];
@@ -24,6 +25,7 @@ export const servicesData: ServiceItem[] = [
     fullDesc: "İşletmenizin operasyonel verimliliğini artırmak için modern yazılım mimarileriyle özel ERP, CRM, stok takip ve B2B portal çözümleri geliştiriyoruz. Güvenli API entegrasyonları, gerçek zamanlı veri analitiği ve ölçeklenebilir bulut mimarileri sunuyoruz.",
     iconName: "Code",
     badge: "Özel Geliştirme",
+    image: "/images/services/service_software.jpg",
     technologies: ["C#", "ASP.NET Core", "React", "Next.js", "TypeScript", "PostgreSQL", "Docker"],
     features: [
       "Kuruma özel iş akış ve süreç otomasyonları",
@@ -47,6 +49,7 @@ export const servicesData: ServiceItem[] = [
     fullDesc: "Fabrika, depo, ofis ve ticari binalarınız için uçtan uca fiziksel ve siber güvenlik altyapıları kuruyoruz. 4K akıllı analitikli IP kameralar, yapay zeka destekli hareket algılama, yedekli omurga ağları ve güvenli uzaktan erişim imkanı sağlıyoruz.",
     iconName: "ShieldCheck",
     badge: "Anahtar Teslim Altyapı",
+    image: "/images/services/service_network.jpg",
     technologies: ["Hikvision", "Dahua", "Cisco", "MikroTik", "Ubiquiti UniFi", "Fiber Optik", "Cat6A/Cat7"],
     features: [
       "4K/Ultra HD Akıllı Analitikli IP Kamera Projelendirmesi",
@@ -70,6 +73,7 @@ export const servicesData: ServiceItem[] = [
     fullDesc: "En son nesil işlemciler, anakartlar, kurumsal depolama üniteleri ve sunucu bileşenlerini doğrudan yetkili distribütör garantisiyle temin ediyoruz. İhtiyacınıza en uygun donanım konfigürasyonunu belirleyip test edilmiş olarak teslim ediyoruz.",
     iconName: "Server",
     badge: "Orijinal Distribütör Garantili",
+    image: "/images/services/service_hardware.jpg",
     technologies: ["Intel Xeon", "AMD EPYC", "ASUS Workstation", "Kingston Enterprise", "Seagate IronWolf", "Synology NAS"],
     features: [
       "Masaüstü, iş istasyonu ve sunucu donanım tedariği",
@@ -93,6 +97,7 @@ export const servicesData: ServiceItem[] = [
     fullDesc: "Standart montaj ayaklarının yetersiz kaldığı direk, köşe, asma tavan veya dar panolarda saha mühendislerimiz tarafından CAD ortamında özel tasarlanan UV ve hava şartlarına dayanıklı PETG/ABS plastik montaj braketleri üretiyoruz.",
     iconName: "Cpu",
     badge: "Özel Tasarım & Üretim",
+    image: "/images/services/service_3d.jpg",
     technologies: ["Endüstriyel 3D Baskı", "PETG Karbon Katkılı", "ABS / ASA Dış Ortam", "Autodesk Fusion 360", "SolidWorks"],
     features: [
       "Kamera direk ve boru geçiş braketleri",

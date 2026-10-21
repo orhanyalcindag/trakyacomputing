@@ -68,6 +68,20 @@ export default function ServicesSection() {
                 C#, ASP.NET Core, React ve Next.js tabanlı kurumsal otomasyonlar, depo/lojistik ERP sistemleri ve özel web portalları. Mevcut muhasebe ve üretim bantlarınızla doğrudan entegrasyon.
               </p>
 
+              {/* Gerçek Görsel Önizleme */}
+              <div className="relative h-44 rounded-2xl overflow-hidden mb-6 border border-white/[0.08] group/img">
+                <img
+                  src="/images/services/service_software.jpg"
+                  alt="Yazılım ve Kurumsal Otomasyon Mühendisliği"
+                  className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/30 to-transparent" />
+                <div className="absolute bottom-3 left-3 text-xs font-mono text-sky-300 font-semibold flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                  <span>C# .NET 9 & React 19 Enterprise Core</span>
+                </div>
+              </div>
+
               {/* Kod & Mimari Önizleme Şeridi */}
               <div className="p-4 rounded-2xl bg-black/40 border border-white/[0.06] mb-6 font-mono text-xs text-slate-300 space-y-1.5">
                 <div className="flex items-center justify-between text-slate-400 text-[11px] pb-1 border-b border-white/[0.06]">
@@ -126,6 +140,20 @@ export default function ServicesSection() {
                 Hikvision ve Dahua 4K IP kameralar, NVR depolama üniteleri ve Cisco/MikroTik yönetilebilir fiber switch kurulumları.
               </p>
 
+              {/* Gerçek Görsel Önizleme */}
+              <div className="relative h-36 rounded-2xl overflow-hidden mb-6 border border-white/[0.08] group/img">
+                <img
+                  src="/images/services/service_network.jpg"
+                  alt="Ağ ve Güvenlik Altyapı Mühendisliği"
+                  className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                <div className="absolute bottom-3 left-3 text-xs font-mono text-blue-300 font-semibold flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
+                  <span>Fiber Optik & PoE+ Gigabit Omurga</span>
+                </div>
+              </div>
+
               <ul className="space-y-2.5 mb-6 text-xs text-slate-300">
                 <li className="flex items-center gap-2">
                   <CheckCircle2 className="w-4 h-4 text-sky-400 shrink-0" />
@@ -181,6 +209,20 @@ export default function ServicesSection() {
                 Standart vidalama ve ayakların yetersiz kaldığı direk, kolon veya dar kabinet alanları için endüstriyel 3D yazıcılarla basılan karbonlu PETG aparatlar.
               </p>
 
+              {/* Gerçek Görsel Önizleme */}
+              <div className="relative h-36 rounded-2xl overflow-hidden mb-6 border border-white/[0.08] group/img">
+                <img
+                  src="/images/services/service_3d.jpg"
+                  alt="3D Endüstriyel Montaj Aparatları"
+                  className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                <div className="absolute bottom-3 left-3 text-xs font-mono text-cyan-300 font-semibold flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
+                  <span>Karbon Takviyeli PETG / Milimetrik CAD</span>
+                </div>
+              </div>
+
               <div className="p-3.5 rounded-2xl bg-black/40 border border-white/[0.06] mb-6 text-xs text-slate-300 space-y-1.5">
                 <div className="text-cyan-300 font-semibold">• UV Işınlarına ve Dış Hava Şartlarına Tam Uyumlu</div>
                 <div className="text-slate-400">• Standart Kameralar & NVR'lar için Milimetrik Uyum</div>
@@ -225,6 +267,20 @@ export default function ServicesSection() {
               <p className="text-sm text-slate-300 leading-relaxed mb-6">
                 Kurumsal iş istasyonları, ECC sunucu bellekleri, yüksek hızlı NVMe depolama üniteleri ve yedekli güç kaynakları. Lüleburgaz içi aynı gün teslimat ve yerinde montaj opsiyonu.
               </p>
+
+              {/* Gerçek Görsel Önizleme */}
+              <div className="relative h-40 rounded-2xl overflow-hidden mb-6 border border-white/[0.08] group/img">
+                <img
+                  src="/images/services/service_hardware.jpg"
+                  alt="Kurumsal Donanım ve Sunucu Tedariği"
+                  className="w-full h-full object-cover group-hover/img:scale-105 transition-transform duration-500"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/25 to-transparent" />
+                <div className="absolute bottom-3 left-3 text-xs font-mono text-indigo-300 font-semibold flex items-center gap-1.5">
+                  <span className="w-2 h-2 rounded-full bg-indigo-400 animate-pulse" />
+                  <span>İş İstasyonları, Sunucu & Depolama Sistemleri</span>
+                </div>
+              </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6 text-xs text-slate-300">
                 <div className="flex items-center gap-2">

@@ -117,6 +117,20 @@ export default function HizmetlerimizPage() {
 
               {/* Bilgi / Teslimat Kutusu */}
               <div className={`lg:col-span-5 ${isEven ? "lg:order-1" : ""}`}>
+                {/* Gerçek Hizmet Fotoğrafı */}
+                <div className="relative h-48 sm:h-56 rounded-2xl overflow-hidden mb-5 border border-slate-200 dark:border-slate-800 shadow-md group">
+                  <img
+                    src={service.image}
+                    alt={service.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
+                  <div className="absolute bottom-3 left-3 right-3 text-xs font-mono text-cyan-300 font-bold flex items-center gap-1.5">
+                    <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shrink-0" />
+                    <span className="truncate">{service.badge} • Trakya Saha Kurulumu</span>
+                  </div>
+                </div>
+
                 <div className="p-7 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 space-y-5 shadow-inner">
                   <h3 className="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-wider border-b border-slate-200 dark:border-slate-800 pb-3 flex items-center gap-2">
                     <CheckCircle className="w-4 h-4 text-emerald-400" />

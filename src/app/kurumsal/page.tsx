@@ -89,6 +89,20 @@ export default function KurumsalPage() {
 
           {/* Görsel / Bilgi Kartı */}
           <div className="p-8 rounded-3xl bg-gradient-to-br from-slate-900 via-[#0d1726] to-sky-950 border border-sky-500/30 text-white space-y-6 shadow-2xl">
+            {/* Mühendislik Laboratuvarı Görseli */}
+            <div className="relative h-48 rounded-2xl overflow-hidden border border-white/10 group">
+              <img
+                src="/images/about/about_lab.jpg"
+                alt="Trakyacomputing Mühendislik Laboratuvarı"
+                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0d1726] via-transparent to-transparent" />
+              <div className="absolute bottom-3 left-3 text-xs font-mono text-cyan-300 font-bold flex items-center gap-1.5">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+                <span>Lüleburgaz Ar-Ge & Saha Mühendislik Merkezi</span>
+              </div>
+            </div>
+
             <div className="flex items-center gap-3 border-b border-slate-800 pb-4">
               <Award className="w-6 h-6 text-cyan-400" />
               <div>
